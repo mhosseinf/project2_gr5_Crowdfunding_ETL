@@ -67,4 +67,7 @@ This project is divided into the following subsections:
 7. Import each CSV file into its corresponding SQL table.
 8. Verify that each table has the correct data by running a SELECT statement for each.
 
-#Code File and Output.
+# Code File and Output.
+- [ETL_Mini_Project_gr5_HF_CT_LP.ipynb](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/blob/main/Crowdfunding_ETL/ETL_Mini_Project_gr5_HF_CT_LP.ipynb), is for analysis.
+- [output](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/tree/main/Crowdfunding_ETL/output) : Imported CSV files
+- [Resources](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/tree/main/Crowdfunding_ETL/Resources): Used data sets for the Analysis. 
