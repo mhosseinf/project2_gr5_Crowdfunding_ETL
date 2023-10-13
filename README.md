@@ -16,6 +16,43 @@ This project is divided into the following subsections:
 
 **01. Create the Category and Subcategory DataFrames**
 
-Extract and transform the "crowdfunding.xlsx" Excel data to create a category DataFrame that has the columns "category_id" and "category".\
-      - "category_id" column that has entries going sequentially from "cat1" to "catn", where n is the number of unique categories\
-      - "category" column that contains only the category titles
+1. Extract and transform the "crowdfunding.xlsx" Excel data to create a category DataFrame that has the columns "category_id" and "category".
+
+      - "category_id" column that has entries going sequentially from "cat1" to "catn", where n is the number of unique categories.
+      - "category" column that contains only the category titles.
+      - The following image shows the "category" DataFrame. \
+![image](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/assets/138610916/35715cf6-04f5-4389-b326-7ef00ab87cfd)
+2. Export the "category" DataFrame as category.csv
+
+3. Extract and transform the "crowdfunding.xlsx" Excel data to create a subcategory DataFrame that has the columns "subcategory_id" and "subcategory".
+
+      - "subcategory_id" column that has entries going sequentially from "subcat1" to "subcatn", where n is the number of unique subcategories.
+      - "subcategory" column that contains only the subcategory titles.
+      - The following image shows the "subcategory" DataFrame. (Added only first 11 rows) \
+![image](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/assets/138610916/a0578284-0d48-4986-93ec-e063a8753e3b)
+4. Export the "subcategory" DataFrame as subcategory.csv
+
+**02. Create the Campaign DataFrame**
+
+1. Extract and transform the crowdfunding.xlsx Excel data to create a campaign DataFrame has the following columns:
+
+      - The "cf_id" column
+      - The "contact_id" column
+      - The "company_name" column
+      - The "blurb" column, renamed to "description"
+      - The "goal" column, converted to the float data type
+      - The "pledged" column, converted to the float data type
+      - The "outcome" column
+      - The "backers_count" column
+      - The "country" column
+      - The "currency" column
+      - The "launched_at" column, renamed to "launch_date" and with the UTC times converted to the datetime format
+      - The "deadline" column, renamed to "end_date" and with the UTC times converted to the datetime format
+      - The "category_id" column, with unique identification numbers matching those in the "category_id" column of the category DataFrame
+      - The "subcategory_id" column, with the unique identification numbers matching those in the "subcategory_id" column of the subcategory DataFrame
+      - The following image shows the "campaign" DataFrame:\
+![image](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/assets/138610916/b0b73b61-877d-40e5-bd8d-3af83bf03985)
+
+2. Export the campaign DataFrame as campaign.csv
+
+
