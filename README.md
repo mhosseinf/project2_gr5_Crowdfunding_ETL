@@ -71,3 +71,76 @@ This project is divided into the following subsections:
 - [ETL_Mini_Project_gr5_HF_CT_LP.ipynb](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/blob/main/Crowdfunding_ETL/ETL_Mini_Project_gr5_HF_CT_LP.ipynb), is for analysis.
 - [output](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/tree/main/Crowdfunding_ETL/output) : Imported CSV files
 - [Resources](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/tree/main/Crowdfunding_ETL/Resources): Used data sets for the Analysis. 
+
+
+# Contacts DataFrame Creation
+
+The last part of the Jupyter code creates Contacts DataFrame from a given Excel file. The code offers two options to achieve this, each described below.
+
+## Option 1: Using Python Dictionary Methods
+
+In this option, we read the data from the Excel file using Pandas, specifically using the `pd.read_excel` function with the `header=3` parameter. The code takes the following steps:
+
+### 1-1. Reading the Data into a Pandas DataFrame
+
+The provided Excel file is read into a Pandas DataFrame, skipping the first three rows.
+
+### 1-2. Converting Data
+
+The code extracts and converts JSON data from each row's 'contact_info' column into a Python dictionary.
+
+### 1-3. Creating Lists
+
+It creates two lists, one for column names and another for row values. These lists are used to create a new DataFrame.
+
+### 1-4. Data Transformation
+
+The code creates a 'first_name' and 'last_name' column by splitting the 'name' column using a space as the delimiter.
+
+### 1-5. Reordering Columns
+
+The columns are reordered as 'contact_id', 'first_name', 'last_name', and 'email'.
+
+### 1-6. Exporting Data
+
+The final DataFrame is exported as a CSV file in the 'output' directory with the filename 'contacts1.csv'.
+
+## Option 2: Using Regular Expressions
+
+In this option, we read the data from the Excel file and extract information using regular expressions. The code includes the following steps:
+
+### 2-1. Reading the Data
+
+The Excel data is loaded into a Pandas DataFrame, skipping the first three rows.
+
+### 2-2. Extracting Contact ID
+
+The code uses regular expressions to extract the four-digit contact ID and adds it to a new 'contact_id' column.
+
+### 2-3. Converting Data Types
+
+It converts the 'contact_id' column to an int64 data type.
+
+### 2-4. Extracting Name
+
+Regular expressions extract the contact's name and add it to a new 'name' column.
+
+### 2-5. Extracting Email
+
+Regular expressions extract email addresses and create an 'email' column.
+
+### 2-6. Creating a Clean DataFrame
+
+A new DataFrame is created with 'contact_id', 'name', and 'email' columns.
+
+### 2-7. Splitting Names
+
+The 'name' column is split into 'first_name' and 'last_name'.
+
+### 2-8. Reordering Columns
+
+The columns are reordered as 'contact_id', 'first_name', 'last_name', and 'email'.
+
+### 2-9. Exporting Data
+
+The final DataFrame is exported as a CSV file in the 'output' directory with the filename 'contacts2.csv'.
