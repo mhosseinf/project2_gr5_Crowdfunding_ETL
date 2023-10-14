@@ -142,6 +142,9 @@ The final DataFrame is exported as a CSV file in the 'output' directory with the
 # Code File and Output.
 - [ETL_Mini_Project_gr5_HF_CT_LP.ipynb](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/blob/main/Crowdfunding_ETL/ETL_Mini_Project_gr5_HF_CT_LP.ipynb), is for analysis.
 - [output](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/tree/main/Crowdfunding_ETL/output) : Imported CSV files
-- [Resources](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/tree/main/Crowdfunding_ETL/Resources): Used data sets for the Analysis. 
+- [Resources](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/tree/main/Crowdfunding_ETL/Resources): Used data sets for the Analysis.
+- [QuickDBD-Free Diagram.png](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/blob/main/Crowdfunding_ETL/QuickDBD-Free%20Diagram.png), is for ERD.
+- [code for ERD diagram.txt](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/blob/main/Crowdfunding_ETL/code%20for%20ERD%20diagram.txt), is code for ERD
+- [crowdfunding_db_schema.sql](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/blob/main/Crowdfunding_ETL/crowdfunding_db_schema.sql), is for creating database. 
 
 
