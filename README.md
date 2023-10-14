@@ -185,7 +185,7 @@ The subcategory table is used to store details about campaign subcategories. It 
 The campaign table is central for storing information about individual crowdfunding campaigns. It includes the following columns:
 
 
-|------------------|-------------------------------------------------------------|
+
 | cf_id            | A unique identifier for each campaign (Primary Key).        |
 |------------------|-------------------------------------------------------------|
 | contact_id       | The identifier of the contact associated with the campaign. |
