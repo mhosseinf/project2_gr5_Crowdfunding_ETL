@@ -1,18 +1,36 @@
 # project2_gr5_Crowdfunding_ETL
 
 **Group Members:**
-- Lakna Chathurani Premasinghe
-- Hossein Falsafi
-- Claive Taguba
+
+|---|-----------------------------|
+|No |           Name              |
+|---|-----------------------------|
+| 1-|Lakna Chathurani Premasinghe |
+|---|-----------------------------|
+| 2-|Hossein Falsafi              |
+|---|-----------------------------|
+| 3-|Claive Taguba                |
+|---|-----------------------------|
 
 # Background of the Project and Analysis.
 For the ETL mini project, work with a partner to build an ETL pipeline using Python, Pandas, and either Python dictionary methods or regular expressions to extract and transform the data. After transforming the data, create four CSV files and use the CSV file data to create an ERD and a table schema. Finally, upload the CSV file data into a Postgres database.
 
 This project is divided into the following subsections:
-01. Create the Category and Subcategory DataFrames
-02. Create the Campaign DataFrame
-03. Create the Contacts DataFrame
-04. Create the Crowdfunding Database
+
+|------|------------------------------------------------|
+| Step | Description                                    |
+|------|------------------------------------------------|
+| 01.  | Create the Category and Subcategory DataFrames |
+|------|------------------------------------------------|
+| 02.  | Create the Campaign DataFrame                  |
+|------|------------------------------------------------|
+| 03.  | Create the Contacts DataFrame (Option 1)       |
+|------|------------------------------------------------|
+| 04.  | Create the Contacts DataFrame (Option 2)       |
+|------|------------------------------------------------|
+| 05.  | Create the Crowdfunding Database               |
+|------|------------------------------------------------|
+
 
 **01. Create the Category and Subcategory DataFrames**
 
@@ -144,3 +162,78 @@ The columns are reordered as 'contact_id', 'first_name', 'last_name', and 'email
 ### 2-9. Exporting Data
 
 The final DataFrame is exported as a CSV file in the 'output' directory with the filename 'contacts2.csv'.
+
+# Crowdfunding Database Schema
+
+The section 4 of the project is about a PostgreSQL schema for creating a Crowdfunding Database. The schema includes four CSV files: `contacts`, `category`, `subcategory`, and `campaign ' created in the previous steps and stored in the output folder. 
+
+## 1-contacts Table
+
+The `contacts` table stores information about individuals involved in crowdfunding campaigns. It consists of the following columns:
+
+|--------------|-----------------------------------------------------|
+| contact_id   | A unique identifier for each contact (Primary Key). |
+|--------------|-----------------------------------------------------|
+| first_name   | The first name of the contact.                      |
+|--------------|-----------------------------------------------------|
+| last_name    | The last name of the contact.                       |
+|--------------|-----------------------------------------------------|
+| email        | The email address of the contact.                   |
+|--------------|-----------------------------------------------------|
+
+## 2-Category Table
+The category table is dedicated to storing information about campaign categories. It includes the following columns:
+
+|--------------|--------------------------------------------------------|
+| category_id  | A unique identifier for each category (Primary Key).   |
+|--------------|--------------------------------------------------------|
+| category     | The name of the category.                              |
+|--------------|--------------------------------------------------------|
+
+## 3-subcategory Table
+The subcategory table is used to store details about campaign subcategories. It consists of the following columns:
+
+|------------------|----------------------------------------------------------|
+| subcategory_id   | A unique identifier for each subcategory (Primary Key).  |
+|------------------|----------------------------------------------------------|
+| subcategory      | The name of the subcategory.                             |
+|------------------|----------------------------------------------------------|
+
+## 4-Campaign Table
+The campaign table is central for storing information about individual crowdfunding campaigns. It includes the following columns:
+
+
+|------------------|-------------------------------------------------------------|
+| cf_id            | A unique identifier for each campaign (Primary Key).        |
+|------------------|-------------------------------------------------------------|
+| contact_id       | The identifier of the contact associated with the campaign. |
+|------------------|-------------------------------------------------------------|
+| company_name     | The name of the company or entity running the campaign.     |
+|------------------|-------------------------------------------------------------|
+| description      | A description of the campaign.                              |
+|------------------|-------------------------------------------------------------|
+| goal             | The fundraising goal for the campaign.                      |
+|------------------|-------------------------------------------------------------|
+| pledged          | The amount pledged by backers.                              |
+|------------------|-------------------------------------------------------------|
+| outcome          | The outcome of the campaign.                                |
+|------------------|-------------------------------------------------------------|
+| backers_count    | The number of backers for the campaign.                     |
+|------------------|-------------------------------------------------------------|
+| country          | The country where the campaign is based.                    |
+|------------------|-------------------------------------------------------------|
+| currency         | The currency used for fundraising.                          |
+|------------------|-------------------------------------------------------------|
+| launched_date    | The date when the campaign was launched.                    |
+|------------------|-------------------------------------------------------------|
+| end_date         | The date when the campaign ended.                           |
+|------------------|-------------------------------------------------------------|
+| category_id      | The identifier of the campaign's category.                  |
+|------------------|-------------------------------------------------------------|
+| subcategory_id   | The identifier of the campaign's subcategory.               |
+|------------------|-------------------------------------------------------------|
+contact_id is a Foreign Key referencing the contacts table's contact_id column.
+category_id is a Foreign Key referencing the category table's category_id column.
+subcategory_id is a Foreign Key referencing the subcategory table's subcategory_id column.
+
+### Note: Foreign Keys enforce relationships between tables, ensuring that the data in the campaign table aligns with the data in the referenced tables.
