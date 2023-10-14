@@ -147,7 +147,7 @@ The final DataFrame is exported as a CSV file in the 'output' directory with the
 
 # Crowdfunding Database Schema
 
-The section 4 of the project is about a PostgreSQL schema for creating a Crowdfunding Database. The schema includes four CSV files: `contacts`, `category`, `subcategory`, and `campaign ' created in the previous steps and stored in the output folder. 
+The section 4 of the project is about a PostgreSQL schema for creating a Crowdfunding Database. The schema includes creating: `contacts`, `category`, `subcategory`, and `campaign' tables using four CSV files created in the previous steps and stored in the output folder. 
 
 ## 1-contacts Table
 
