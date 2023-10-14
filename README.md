@@ -73,25 +73,7 @@ This project is divided into the following subsections:
 
 2. Export the campaign DataFrame as campaign.csv
 
-**04. Create the Crowdfunding Database**
-
-1. Inspect the four CSV files, and then sketch an ERD of the tables by using QuickDBDLinks to an external site.
-2. Use the information from the ERD to create a table schema for each CSV file.
-**Note**: Remember to specify the data types, primary keys, foreign keys, and other constraints.
-3. Save the database schema as a Postgres file named crowdfunding_db_schema.sql.
-4. Create a new Postgres database, named crowdfunding_db.
-5. Using the database schema, create the tables in the correct order to handle the foreign keys.
-6. Verify the table creation by running a SELECT statement for each table.
-7. Import each CSV file into its corresponding SQL table.
-8. Verify that each table has the correct data by running a SELECT statement for each.
-
-# Code File and Output.
-- [ETL_Mini_Project_gr5_HF_CT_LP.ipynb](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/blob/main/Crowdfunding_ETL/ETL_Mini_Project_gr5_HF_CT_LP.ipynb), is for analysis.
-- [output](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/tree/main/Crowdfunding_ETL/output) : Imported CSV files
-- [Resources](https://github.com/mhosseinf/project2_gr5_Crowdfunding_ETL/tree/main/Crowdfunding_ETL/Resources): Used data sets for the Analysis. 
-
-
-# Contacts DataFrame Creation
+**03. Create the Contacts DataFrame**
 
 The last part of the Jupyter code creates Contacts DataFrame from a given Excel file. The code offers two options to achieve this, each described below.
 
