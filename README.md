@@ -2,7 +2,7 @@
 
 **Group Members:**
 
-|---|-----------------------------|
+
 |No |           Name              |
 |---|-----------------------------|
 | 1-|Lakna Chathurani Premasinghe |
@@ -17,7 +17,7 @@ For the ETL mini project, work with a partner to build an ETL pipeline using Pyt
 
 This project is divided into the following subsections:
 
-|------|------------------------------------------------|
+
 | Step | Description                                    |
 |------|------------------------------------------------|
 | 01.  | Create the Category and Subcategory DataFrames |
@@ -153,7 +153,7 @@ The section 4 of the project is about a PostgreSQL schema for creating a Crowdfu
 
 The `contacts` table stores information about individuals involved in crowdfunding campaigns. It consists of the following columns:
 
-|--------------|-----------------------------------------------------|
+
 | contact_id   | A unique identifier for each contact (Primary Key). |
 |--------------|-----------------------------------------------------|
 | first_name   | The first name of the contact.                      |
@@ -166,7 +166,7 @@ The `contacts` table stores information about individuals involved in crowdfundi
 ## 2-Category Table
 The category table is dedicated to storing information about campaign categories. It includes the following columns:
 
-|--------------|--------------------------------------------------------|
+
 | category_id  | A unique identifier for each category (Primary Key).   |
 |--------------|--------------------------------------------------------|
 | category     | The name of the category.                              |
@@ -175,7 +175,7 @@ The category table is dedicated to storing information about campaign categories
 ## 3-subcategory Table
 The subcategory table is used to store details about campaign subcategories. It consists of the following columns:
 
-|------------------|----------------------------------------------------------|
+
 | subcategory_id   | A unique identifier for each subcategory (Primary Key).  |
 |------------------|----------------------------------------------------------|
 | subcategory      | The name of the subcategory.                             |
