@@ -220,3 +220,39 @@ category_id is a Foreign Key referencing the category table's category_id column
 subcategory_id is a Foreign Key referencing the subcategory table's subcategory_id column.
 
 ### Note: Foreign Keys enforce relationships between tables, ensuring that the data in the campaign table aligns with the data in the referenced tables.
+
+
+
+# Crowdfunding Database creation using SQLAlchamy- this part was optional and we did it as an extra task to challenge ourselves
+
+## Introduction
+The associated Jupyter file name is Crowdfunding. It's designed for performing an ETL (Extract, Transform, Load) process to create and populate a crowdfunding database from CSV files created in the 1st step. The ETL process involves reading data from CSV files, defining the database structure using SQLAlchemy, and transferring the data into the database tables. This README provides an overview of the code and its functionality.
+
+## Code Overview
+The ETL process is divided into several steps:
+
+### Step 1: Define the Database Structure
+The database structure is defined using SQLAlchemy, and it consists of four tables:
+- `Campaign`: Contains information about crowdfunding campaigns.
+- `Category`: Describes campaign categories.
+- `Subcategory`: Provides information about campaign subcategories.
+- `Contacts`: Stores contact information for campaign participants.
+Each table is defined as a class with attributes corresponding to the respective tables' columns.
+
+### Step 2: Create an SQLite Database
+An SQLite database is created using SQLAlchemy's `create_engine` function. The database file is named "crowdfunding.sqlite," and stored in the output folder, and the engine connects to it.
+
+### Step 3: Load Data from CSV Files
+Data is loaded from CSV files ("campaign.csv," "category.csv," "subcategory.csv," and "contacts1.csv") into Pandas DataFrames. These DataFrames hold the data that will be transferred into the database tables.
+
+### Step 4: Data Transformation
+The code iterates through each DataFrame to create instances of the defined classes (Campaign, Category, Subcategory, Contacts). Data from the DataFrames is used to create instances for each table, which are added to a session.
+
+### Step 5: Data Loading
+The instances created in the previous step are added to the SQLAlchemy session. This action stages the data for insertion into the database.
+
+### Step 6: Data Commit
+The staged data is committed to the database using `session. commit()`. This action persists in the data in the database tables.
+
+### Step 7: Database Inspection
+The code uses SQLAlchemy's `inspector` to inspect the database and collect table information. The table names within the database are retrieved to make sure the previous process was done correctly
