@@ -9,7 +9,7 @@
 |---|-----------------------------|
 | 2-|Hossein Falsafi              |
 |---|-----------------------------|
-| 3-|Claive Taguba                |
+| 3-|Clive Taguba                 |
 |---|-----------------------------|
 
 # Background of the Project and Analysis.
@@ -186,34 +186,34 @@ The campaign table is central for storing information about individual crowdfund
 
 
 
-| cf_id            | A unique identifier for each campaign (Primary Key).        |
-|------------------|-------------------------------------------------------------|
-| contact_id       | The identifier of the contact associated with the campaign. |
-|------------------|-------------------------------------------------------------|
-| company_name     | The name of the company or entity running the campaign.     |
-|------------------|-------------------------------------------------------------|
-| description      | A description of the campaign.                              |
-|------------------|-------------------------------------------------------------|
-| goal             | The fundraising goal for the campaign.                      |
-|------------------|-------------------------------------------------------------|
-| pledged          | The amount pledged by backers.                              |
-|------------------|-------------------------------------------------------------|
-| outcome          | The outcome of the campaign.                                |
-|------------------|-------------------------------------------------------------|
-| backers_count    | The number of backers for the campaign.                     |
-|------------------|-------------------------------------------------------------|
-| country          | The country where the campaign is based.                    |
-|------------------|-------------------------------------------------------------|
-| currency         | The currency used for fundraising.                          |
-|------------------|-------------------------------------------------------------|
-| launched_date    | The date when the campaign was launched.                    |
-|------------------|-------------------------------------------------------------|
-| end_date         | The date when the campaign ended.                           |
-|------------------|-------------------------------------------------------------|
-| category_id      | The identifier of the campaign's category.                  |
-|------------------|-------------------------------------------------------------|
-| subcategory_id   | The identifier of the campaign's subcategory.               |
-|------------------|-------------------------------------------------------------|
+| cf_id            | A unique identifier for each campaign (Primary Key).                     |
+|------------------|--------------------------------------------------------------------------|
+| contact_id       | The identifier of the contact associated with the campaign.(Foreign Key) |
+|------------------|--------------------------------------------------------------------------|
+| company_name     | The name of the company or entity running the campaign.                  |
+|------------------|--------------------------------------------------------------------------|
+| description      | A description of the campaign.                                           |
+|------------------|--------------------------------------------------------------------------|
+| goal             | The fundraising goal for the campaign.                                   |
+|------------------|--------------------------------------------------------------------------|
+| pledged          | The amount pledged by backers.                                           |
+|------------------|--------------------------------------------------------------------------|
+| outcome          | The outcome of the campaign.                                             |
+|------------------|--------------------------------------------------------------------------|
+| backers_count    | The number of backers for the campaign.                                  |
+|------------------|--------------------------------------------------------------------------|
+| country          | The country where the campaign is based.                                 |
+|------------------|--------------------------------------------------------------------------|
+| currency         | The currency used for fundraising.                                       |
+|------------------|--------------------------------------------------------------------------|
+| launched_date    | The date when the campaign was launched.                                 |
+|------------------|--------------------------------------------------------------------------|
+| end_date         | The date when the campaign ended.                                        |
+|------------------|--------------------------------------------------------------------------|
+| category_id      | The identifier of the campaign's category.(Foreign Key)                  |
+|------------------|--------------------------------------------------------------------------|
+| subcategory_id   | The identifier of the campaign's subcategory.(Foreign Key)               |
+|------------------|--------------------------------------------------------------------------|
 
 contact_id is a Foreign Key referencing the contacts table's contact_id column.
 category_id is a Foreign Key referencing the category table's category_id column.
